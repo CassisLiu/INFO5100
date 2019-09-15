@@ -1,0 +1,49 @@
+Class:
+
+RegisterationSystem:
+	properties:
+		List<Course>;
+		List<Student>;
+		
+	action:
+		addACourse;
+		addAStudent;
+	
+	
+Course:
+	properties:
+		courseID;
+		name;
+		lecturer;
+		time;
+		capacity;
+		description;
+		
+		
+Student:
+	properties:
+		studentID;
+		name;
+		List<Course>;
+		
+	action:
+		searchCourse(long courseID);
+		registerACourse(Course courseID);
+		unregister(String courseID);
+		checkCourseDescription(String courseID);
+		searchLecturer(String lecturer);
+
+Time:
+	properties:
+		day;
+		time;
+		
+				
+Lecturer
+	properties:
+		name;
+		yearsOfExperience;
+		description;
+		
+
+		
