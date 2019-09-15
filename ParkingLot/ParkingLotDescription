@@ -1,0 +1,32 @@
+Parking Lot
+
+CLASS
+
+ParkingLot
+	properties:
+		capacity
+		List<Car>
+		int[][] available; // keep in record the available parking space
+		
+	action:
+		checkAvailability
+		parkACar
+		int checkOutACar
+				
+
+Driver
+	properties:
+		car
+		name
+		
+	action:
+		checkAvailability
+		parkIntheSpace
+		payParkingFee		
+		
+
+Car
+	peopertites:
+		size
+		color
+		license
