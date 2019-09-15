@@ -1,0 +1,33 @@
+Traffic Light Control System 
+
+Class:
+
+Enum Light: 
+	direction:
+	S2N(south to north direction), S2W, N2S, N2E, E2W, E2S, W2E, W2N, S2E, E2N, N2W, W2S
+Light:
+	properties:
+		direction
+		nextdirection
+		lighted
+		
+	action:
+		light()
+		blackOut()
+		islighted()
+		
+		
+LightController
+	properties:
+		currentLight
+		timer
+		List<Road> roads
+		
+	action:
+		executeLightChange()
+		
+Road
+	List<String> vehicles
+
+
+		
