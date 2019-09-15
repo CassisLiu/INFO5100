@@ -1,0 +1,29 @@
+Vending Machine
+
+Class
+
+Machine
+	properties:
+		machineID;
+		brand;
+		List<Product> products;
+		
+	action:
+		acceptMoney
+		vendOut(product)
+		addProduct
+		
+Custom:
+	properties:
+		useWhichMachine
+		
+	action:
+		purchase
+		
+		
+Product
+	properties:
+		price
+		
+Enum Money:
+	FiveCents, TenCents, Quarter, FiftyCents, OneDollar, TenDollar, TwentyDollar
