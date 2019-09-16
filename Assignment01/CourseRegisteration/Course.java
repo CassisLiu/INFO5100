@@ -24,3 +24,4 @@ public class Course {
 		capacity += change;
 	}
 }
+
