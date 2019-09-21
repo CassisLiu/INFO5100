@@ -14,6 +14,10 @@ public class Employee {
 	        this.salary = salary;
 	    }
 
+	    public void raiseSalary(double byPercent) {
+	    	this.salary *= byPercent;
+	    }
+	    
 	    public int getId() {
 	        return id;
 	    }
