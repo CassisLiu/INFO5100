@@ -1,0 +1,29 @@
+Q9.Encapsulation
+
+Encapsulation is a methodology in Java that put everything(i.e. data, methods) relating to an 
+item A into a black box, anyone who wants to utilize this item A, just utilize the interface 
+exposed on the surface of the black box. To be short, instead of focusing on how to realizing 
+item A, user only care about the interface with which can utilize item A. Also, encapsulation 
+can hide information that shouldn't be exposed to the public, using access modifier. 
+
+
+example:
+I want to have a ATM machine, which can withdraw, deposit money, check bank balance, and transfer 
+money to another account.
+
+Answer: 
+To implement a ATM machine, we should have class of banking account, with which we can get the 
+information of the bank balance and user information; we should have an account database, when 
+an user use his card to do some operations, we should check in the account database whether the 
+card exists or not; we should have the machine class, in which we realizes the operation can be
+conducted by user.
+In this example, class "banking account" and account database are encapsulated, and "machine" class
+can directly use their function like "check account availability", "check bank balance" etc. to 
+realize method in "machine" class. We don't care about how banking account and database realizes
+the functionality of checking, but utilize their function instead. In the meanwhile, we can hide the 
+information of user's account information from irrelevant people.
+
+
+Q10. What is the difference between Encapsulation and Abstraction
+Abstraction is hiding unnecessary details and focuses on the relevant information, it's a design 
+concept. Encapsulation is hiding information outside, and it's an implementation concept.
