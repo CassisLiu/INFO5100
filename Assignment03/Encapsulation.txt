@@ -27,3 +27,4 @@ information of user's account information from irrelevant people.
 Q10. What is the difference between Encapsulation and Abstraction
 Abstraction is hiding unnecessary details and focuses on the relevant information, it's a design 
 concept. Encapsulation is hiding information outside, and it's an implementation concept.
+
