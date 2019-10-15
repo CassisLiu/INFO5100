@@ -8,8 +8,7 @@ class MyIndexOutOfBoundException extends IndexOutOfBoundsException {
 	public MyIndexOutOfBoundException() {
 		lowerBound = 0;
 		upperBound = 9;
-	}
-	
+	}	
 	public int get(int i) {
 		if(i > upperBound || i < lowerBound) {
 			throw new IndexOutOfBoundsException("Error message: " + toString(i));
@@ -18,17 +17,9 @@ class MyIndexOutOfBoundException extends IndexOutOfBoundsException {
 	}
 	
 	public String toString(int index) {
-		String s = index + ", but Lower bound: " + lowerBound + ", Upper bound:" + upperBound;
+		String s = "Index: " + index + ", but Lower bound: " + lowerBound + ", Upper bound:" + upperBound;
 		return s;
 	}
 }
 
-class Test {
-	public static void main(String[] args) {
-		try {
-			
-		} catch(MyIndexOutOfBoundException e) {
-			
-		}
-	}
-}
+

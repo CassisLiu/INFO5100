@@ -1,0 +1,55 @@
+6 would be printed out.
+Explaination: There are two variables are sumed up: count and i.
+			Count becomes 3 when b calls function addAll overrided in B class,
+			i is 3 defined(overrided) in the B class, when getI function is called, compiler first find
+			i filed from subclass, which is 3.
+			Then sum count and i up, the answer would be 6.
+
+class A {
+	List<Object> list = new LinkedList<>();
+	public boolean addAll(Collection<Object> c) {
+		Iterator<Object> it = c.iterator();
+		while(it.hasNext())
+			this.add(it.next());
+		return true;
+	}
+	public boolean add(Object e) {
+		list.add(e);
+		return true;
+	}
+
+	private int i = 0;
+	public int getI(){
+		return i;
+	}
+}
+
+class B extends A {
+	private int addCount = 0;
+	public int getAddCount() {
+		return addCount;
+	}
+
+	@Override
+	public boolean addAll(Collection<Object> c) {
+		addCount += c.size();
+		return super.addAll(c);
+	}
+	
+	@Override
+	public boolean add(Object e) {
+		addCount++;
+		return super.add(e);
+	}
+    
+	public int i = 3;
+}
+
+public class Test {
+	public static void main(String[] args) {
+		B b = new B();
+		List<Object> list = Arrays.asList(1,2,3);
+		b.addAll(list);
+		System.out.println(b.getAddCount()+b.getI());
+	}
+} 

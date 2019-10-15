@@ -4,7 +4,7 @@ public class Pet {
 	private String name;
 	private String ownerName;
 	private String color;
-	protected int sex;
+	protected String sex;
 	public static final int male = 1;
 	public static final int female = 2;
 	public static final int spayed = 3;
@@ -12,21 +12,26 @@ public class Pet {
 	public String getName() {
 		return name;
 	}
+	public Pet(String name, String owner, String color) {
+		this.name = name;
+		this.ownerName = owner;
+		this.color = color;
+	}
 	public String getOwnerName() {
 		return ownerName;
 	}
 	public void setSex(int sexid) {
 		switch(sexid) {
-			case 1: sex = male;
-			case 2: sex = female;
-			case 3: sex = spayed;
-			case 4: sex = neutered;			
+			case male: sex = "MALE";
+			case female: sex = "FEMALE";
+			case spayed: sex = "SPAYED";
+			case neutered: sex = "NEUTERED";			
 		}
 	}
 	public String getColor() {
 		return color;
 	}
-	public int getSex() {
+	public String getSex() {
 		return sex;
 	} 
 	@Override

@@ -1,0 +1,11 @@
+Final: final keyword is used to define an entity which cannot be changed.
+	final class: a class can not be inherited
+	final method: method that cannot be overrided or will be hidden by subsclasses
+	final variable: can only be initialized once, either via an initializer or an assignment statement. 
+	
+	
+Finally: a keyword define an logic block, usually follow the try block, to ensure the exist of the try block.
+	finally block is executed even if unexpected exception has occurs. finally is useful for more than just 
+	exception handling — it allows the programmer to avoid having cleanup code accidentally bypassed by a return, 
+	continue, or break. Putting cleanup code in a finally block is always a good practice, even when no exceptions 
+	are anticipated.
