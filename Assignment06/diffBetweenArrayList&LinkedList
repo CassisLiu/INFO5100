@@ -1,0 +1,4 @@
+1. ArrayList can random access element in time O(1)
+   The time for LinkedList random access element would be on average of O(n)
+2. ArrayList add an element would have amortized time O(1), but in real world, it's longer than O(1)
+   LinkedList would add an element with time O(1)
